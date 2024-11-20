@@ -1,0 +1,20 @@
+.banner {
+  position: relative;
+  background: linear-gradient(135deg, purple, red);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--mantine-spacing-md);
+  height: 160px;
+}
+
+.text {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: white;
+  font-size: var(--mantine-font-size-xl);
+  font-weight: 700;
+}
