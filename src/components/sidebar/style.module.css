@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 1;
   position: sticky;
   /* background-color: rgba(0, 0, 0, 0.812); */
   background-color: white;
@@ -21,18 +21,23 @@
   color: #444;
   cursor: pointer;
   padding: 10px 0 20px;
+  text-decoration: none;
 
+  position: relative;
+  width: 76px;
 
   svg {
-    font-size: 30px;
+    font-size: 25px;
     /* fill: #444; */
   }
 
   span {
     font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
   }
 
-  &[data-active] {
+  &[aria-current] {
     & {
       color: green;
 
