@@ -2,6 +2,8 @@ import { Container } from "@mantine/core";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
+
+  return <Outlet />
   return (
     <Container bg="#f5f5f5">
       <Container >
