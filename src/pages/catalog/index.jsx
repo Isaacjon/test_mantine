@@ -4,8 +4,10 @@ import { categories, products } from "../../../data";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { FaFire } from "react-icons/fa";
 import { LiaShoppingBagSolid } from "react-icons/lia";
+import useStore from "../../store";
 
 export const Catalog = () => {
+  const store = useStore((state)=> state)
 
   return (
     <>
@@ -118,7 +120,7 @@ export const Catalog = () => {
                       {category.description}
                     </Text>
                   </Box>
-                  <Center style={{borderRadius: '50%', height: '27px', minWidth: '27px', p: "5px"}} bd="1px solid #ccc" onClick={()=> {}}>
+                  <Center style={{borderRadius: '50%', height: '27px', minWidth: '27px', p: "5px"}} bd="1px solid #ccc" onClick={() => store.setDrawer(category)}>
                     <LiaShoppingBagSolid size="18px"/>
                   </Center>
                 </Flex>

@@ -1,6 +1,6 @@
-.sidebar {
+.checkout-btn {
+  padding: 15px 20px;
   display: flex;
-  padding: 0 20px;
   align-items: center;
   justify-content: space-between;
   left: 0;
@@ -8,9 +8,8 @@
   bottom: 0;
   z-index: 1;
   position: sticky;
-  /* background-color: rgba(0, 0, 0, 0.812); */
   background-color: white;
-  box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+  border:1px solid rgba(220, 220, 220, 0.3) ;
 }
 
 .sideLink  {

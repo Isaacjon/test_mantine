@@ -11,8 +11,9 @@ export const Cart = () => {
   const cart = useStore((state) => state.cart);
   const emptyCart = useStore((state) => state.emptyCart);
 
+  const h = !!cart.length ? `(76.7px + 66px)` : "(76.7px)"
   return (
-    <Stack mih="calc(100vh - 76.7px)">
+    <Stack mih={`calc(100vh - ${h})`}>
       {!cart?.length ? (
         <Box m="auto" maw="70%">
           <Image fit="cover" src={imgUrl} alt="no product" />

@@ -9,7 +9,7 @@ import {
   Text,
 } from "@mantine/core";
 import { Outlet } from "react-router-dom";
-import { Sidebar } from "./sidebar";
+import { Navbar } from "./navbar";
 import useStore from "../store";
 import { FaFire } from "react-icons/fa";
 
@@ -19,7 +19,7 @@ const Layout = () => {
   return (
     <>
       <Outlet />
-      <Sidebar />
+      <Navbar />
       <Drawer
         opened={!!store.drawer}
         onClose={() => store.setDrawer(null)}
