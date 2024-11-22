@@ -18,14 +18,23 @@ const mainLinksData = [
 
 export const CheckoutBtn = () => {
 
+  const cart = useStore((state)=> state.cart)
+  
   let location = useLocation();
 
   if(!location.pathname.includes('cart')) return null;
+
+  const {sum, amount} = cart?.reduce((prev, Curr)=>{
+       return {
+        sum: (prev.sum + (Curr.price * Curr.count))?.toFixed(2),
+        amount:  prev.amount + Curr.count
+       }
+  }, {sum: 0, amount: 0}) || {}
   return (
     <nav className={style['checkout-btn']}>
       <Flex direction="column">
-        <Text size="18px" fw="700" c="dark">140000 s&apos;om</Text>
-        <Text size="14px" fw="500" c="gray">7 mahsulotlar</Text>
+        <Text size="18px" fw="700" c="dark">{sum} s&apos;om</Text>
+        <Text size="14px" fw="500" c="gray" mt="5px">{amount} mahsulotlar</Text>
       </Flex>
 
       <Button bg="green.8" radius="10px">Rasmiylashtirish</Button>
