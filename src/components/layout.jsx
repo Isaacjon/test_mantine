@@ -11,15 +11,25 @@ import {
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./navbar";
 import useStore from "../store";
-import { FaFire } from "react-icons/fa";
+// import { FaFire } from "react-icons/fa";
+import { TopLogo } from "./top-logo";
+import { Header } from "./header";
 
 const Layout = () => {
-  const store = useStore((state) => state);
+  // const store = useStore((state) => state);
+
 
   return (
     <>
+      <TopLogo />
+
+      <Header />
       <Outlet />
       <Navbar />
+
+
+
+      {/*
       <Drawer
         opened={!!store.drawer}
         onClose={() => store.setDrawer(null)}
@@ -97,7 +107,7 @@ const Layout = () => {
             Savatga qo&apos;shish
           </Button>
         </Stack>
-      </Drawer>
+      </Drawer> */}
     </>
   );
 };

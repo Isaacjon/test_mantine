@@ -1,5 +1,5 @@
 .checkout-btn {
-  padding: 15px 20px;
+  /* padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,7 +9,7 @@
   z-index: 1;
   position: sticky;
   background-color: white;
-  border:1px solid rgba(220, 220, 220, 0.3) ;
+  border:1px solid rgba(220, 220, 220, 0.3) ; */
 }
 
 .sideLink  {

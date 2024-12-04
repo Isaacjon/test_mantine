@@ -1,0 +1,27 @@
+.item {
+  border-bottom: 1px solid #444;
+  border-radius: 0;
+  padding: 0;
+
+}
+
+.control {
+  padding: 20px 0 25px;
+}
+
+.label {
+  padding:  0px ;
+}
+
+.chevron {
+  
+  svg {
+    width: 25px !important;
+    height: 25px !important;
+    color: #444
+  }
+}
+
+.content {
+  padding: 0 0 20px;
+}

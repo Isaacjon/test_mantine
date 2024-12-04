@@ -4,6 +4,7 @@ import { create } from 'zustand'
 const useStore = create((set) => ({
   cart: [],
   drawer: null,
+  cartLength: 0,
   addToCart: (product) => set((state) => ({
     // cart: [product, ...state.cart]
     cart: (()=> {
@@ -15,21 +16,23 @@ const useStore = create((set) => ({
       } else { // if have not added this product yet, add it to our cart,
        return [{...product, count: 1}, ...state.cart]
       }
-    })()
+    })(),
+    cartLength: state.cartLength + 1
   })),
-  removeFromCart: (product) => set((state) => ({
+  removeFromCart: (product, removeAll) => set((state) => ({
     cart: (()=> {
       const sameProduct = state.cart.find(oldProduct => oldProduct.id === product.id) // check for same product
   
-      if(sameProduct.count > 1) { // if more than 1, decrement its count value
+      if(sameProduct.count > 1 && !removeAll) { // if more than 1, decrement its count value
         sameProduct.count = sameProduct.count - 1
         return [...state.cart]
       } else { // if left 1 item, remove it completely,
        return state.cart.filter(p => p.id !== product.id)
       }
-    })()
+    })(),
+    cartLength: state.cartLength - 1
   })),
-  emptyCart: () => set(() => ({cart: []})),
+  emptyCart: () => set(() => ({cart: [], cartLength: 0})),
   setDrawer: (product) => set(() => ({
     drawer: product
   }))
