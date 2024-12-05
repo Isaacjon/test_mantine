@@ -46,7 +46,7 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <Box bg="#21282b" p="32px 16px" style={{ color: 'white' }}>
+    <Box bg="#21282b" p="10px 16px 32px 16px" style={{ color: 'white' }}>
         {/* Mobile Version */}
         <Box hiddenFrom="sm">
           <Accordion chevronSize={25} variant="filled" defaultValue="buyers" classNames={styles}>

@@ -1,5 +1,5 @@
 import { HiOutlineHome } from "react-icons/hi";
-import { IoBookmark, IoSearchOutline } from "react-icons/io5";
+import { IoBookmarkOutline, IoSearchOutline } from "react-icons/io5";
 import { RiShoppingCartLine } from "react-icons/ri";
 
 import { RiUser3Line } from "react-icons/ri";
@@ -12,9 +12,9 @@ import { CheckoutBtn } from "../../pages/cart/components/checkout-btn";
 
 const mainLinksData = [
   { icon: <IoSearchOutline />, label: "Главная", to: "/" },
-  { icon: <IoBookmark />, label: "Мой список", to: "/shopping-list" },
+  { icon: <IoBookmarkOutline />, label: "Мой список", to: "/shopping-list" },
   { icon: <HiOutlineHome />, label: "Магазины", to: "/shop" },
-  { icon: <RiUser3Line />, label: "Вход", to: "/login" },
+  { icon: <RiUser3Line />, label: "Вход", to: "/auth" },
   { icon: <RiShoppingCartLine />, label: "Корзина", to: "/cart" },
 ];
 

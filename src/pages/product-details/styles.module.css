@@ -1,0 +1,22 @@
+.slide {
+  padding: 0;
+}
+
+.indicators {
+  bottom: -10px !important;
+  align-items: center;
+}
+
+.indicator {
+  width: 4.5px;
+  height: 4.5px;
+  transition: width 250ms ease;
+  background: gray;
+
+
+  &[data-active] {
+    background: #fdc300 !important;
+    width: 6px !important;
+    height: 6px !important;
+  }
+}

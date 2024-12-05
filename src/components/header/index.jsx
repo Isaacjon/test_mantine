@@ -3,13 +3,15 @@ import { SearchInp } from "../search-input";
 import { useDisclosure } from '@mantine/hooks';
 import { SideBarToggle, Sidebar } from "../sidebar";
 import { useLocation } from "react-router-dom";
+import { MdArrowForwardIos, MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { IoMdArrowBack } from "react-icons/io";
 
 export const Header = () => {
   const [opened, { open, close }] = useDisclosure(false);
 
   const {pathname} = useLocation()
 
-  if(pathname === '/checkout') return null
+  if(pathname === '/checkout' || pathname === '/auth') return null
   
   return (
   <>

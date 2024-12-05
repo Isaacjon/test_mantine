@@ -9,6 +9,7 @@
 
 .logo {
   /* Base styles for all logos */
+  cursor: pointer;
   opacity: 1;
   transition: opacity 0.5s linear; /* Adjust transition duration and easing as needed */
   position: absolute;
@@ -16,7 +17,14 @@
 }
 
 /* Initial state: logo is not visible */
-.logo-container > *:not(.active) {
+.logo-container > .logo:not(.active) {
   opacity: 0;
+}
+
+.backIcon {
+  margin-right: auto;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
 }
 

@@ -62,11 +62,23 @@ const imgs = [
   "https://cdn.leroymerlin.ru/lmru/image/upload/dpr_2.0,f_auto/q_auto/w_156/h_156/c_pad/b_white/d_photoiscoming.png/v1729515355/lmcode/lHSAz14ZrUu8Aj2Kg3jeDg/89380284.png",
 ];
 
-const products = [
+const  imageList = [
+  '',
+  'https://cdn.leroymerlin.ru/lmru/image/upload/f_aut…392/lmcode/79e3PcKzOECm4RET5oEz8Q/14047010_01.png',
+  'https://cdn.leroymerlin.ru/lmru/image/upload/f_auto/q_auto/dpr_2.0/c_pad/w_400/h_400/v1697817392/lmcode/pW-rJKKVRUe6A4efGooIdA/14047010_02.png',
+  'https://cdn.leroymerlin.ru/lmru/image/upload/f_aut…392/lmcode/nDpWnKP8fkuV5dj6LdCs-g/14047010_03.png',
+  'https://cdn.leroymerlin.ru/lmru/image/upload/f_aut…392/lmcode/8TmK_aRafEydWL_IWXHHDg/14047010_04.png',
+  'https://cdn.leroymerlin.ru/lmru/image/upload/f_aut…88/lmcode/LwDUMCpolUewkDkcTr3XBQ/14047010_drw.png',
+]
+
+export const products = [
   {
+    categoryType: 'Световые города новогодние',
     id: 1,
     name: "Ель новогодняя искусственная «Красивая» 180 см",
     image: imgs[0],
+    imageList,
+    video: 'https://cdn.leroymerlin.ru/lmru/image/upload/video/lmcode/yLmdB_ZC90KDMb7c1Ad8tw/14047010_video.mp4', 
     originalPrice: 35990,
     currentPrice: 26990,
     rating: 5,
@@ -74,23 +86,29 @@ const products = [
     onSale: true,
   },
   {
+    categoryType: 'Световые города новогодние',
     id: 2,
     name: "Композиция новогодняя светодиодная Карусель 20x18x23",
     image: imgs[1],
+    imageList,
     originalPrice: 17660,
     currentPrice: 12990,
     onSale: true,
   },
   {
+    categoryType: 'Новогодние хвойные гирлянды и сваги',
     id: 3,
     name: "Гирлянда Хвоя 270 см 20 LED",
     image: imgs[2],
+    imageList,
     currentPrice: 3990,
   },
   {
+    categoryType: 'Новогодние хвойные гирлянды и сваги',
     id: 4,
     name: "Гирлянда светодиодная занавес электрическая",
     image: imgs[3],
+    imageList,
     originalPrice: 2790,
     currentPrice: 1690,
     onSale: true,
@@ -106,32 +124,40 @@ const imgs2 = [
 ]
 
 
-const products2 = [
+export const products2 = [
   {
+    categoryType: 'Готовые шторы',
     id: 5,
     name: "Штора на ленте Inspire Ryazan 200x280 см цвет розовый",
     image: imgs2[0],
+    imageList,
     originalPrice: 22150,
     currentPrice: 15430,
     ratingCount: 1,
     onSale: true,
   },
   {
+    categoryType: 'Люстры',
     id: 6,
     name: "Люстра потолочная светодиодная Schaffner Quieto 1905-2 с пультом управления 18 м² регулируемый белый свет цвет белый",
     image: imgs2[1],
+    imageList,
     currentPrice: 12460,
   },
   {
+    categoryType: 'Тепловые пушки',
     id: 7,
     name: "Тепловая пушка электрическая Monlan MPK-30R 3000 Вт",
     image: imgs2[2],
+    imageList,
     currentPrice: 14260,
   },
   {
+    categoryType: 'Зеркала в ванную комнату',
     id: 8,
     name: "Зеркало для ванной Light Led с подсветкой 40x60 см цвет белый",
     image: imgs2[3],
+    imageList,
     currentPrice: 13350,
   },
 ];

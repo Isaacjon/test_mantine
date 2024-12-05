@@ -14,6 +14,9 @@ import { Cart } from "./pages/cart";
 import { Profile } from "./pages/profile";
 import { Checkout } from "./pages/checkout";
 import { Notifications } from "@mantine/notifications";
+import { ShoppingList } from "./pages/shopping-list";
+import { Auth } from "./pages/auth";
+import { ProductDetails } from "./pages/product-details";
 
 function App() {
   const theme = createTheme({
@@ -26,12 +29,13 @@ function App() {
             {/* */}
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
-              <Route path="shopping-list" element={<Catalog />} />
+              <Route path="shopping-list" element={<ShoppingList/>} />
               <Route path="shop" element={<Cart />} />
-              <Route path="login" element={<Profile />} />
+              <Route path="auth" element={<Auth />} />
               <Route path="cart" element={<Cart />} />
               <Route path="catalog" element={<Catalog />} />
               <Route path="checkout" element={<Checkout />} />
+              <Route path="product/:id" element={<ProductDetails />} />
             </Route>
             
           </Routes>
