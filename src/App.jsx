@@ -17,6 +17,7 @@ import { Notifications } from "@mantine/notifications";
 import { ShoppingList } from "./pages/shopping-list";
 import { Auth } from "./pages/auth";
 import { ProductDetails } from "./pages/product-details";
+import { Shop } from "./pages/shop";
 
 function App() {
   const theme = createTheme({
@@ -30,7 +31,7 @@ function App() {
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="shopping-list" element={<ShoppingList/>} />
-              <Route path="shop" element={<Cart />} />
+              <Route path="shop" element={<Shop />} />
               <Route path="auth" element={<Auth />} />
               <Route path="cart" element={<Cart />} />
               <Route path="catalog" element={<Catalog />} />

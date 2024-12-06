@@ -15,7 +15,7 @@ export const Header = () => {
   
   return (
   <>
-    <Flex gap="12px" bg="white" px="16px" align="center" justify="space-between" h="48px">
+    <Flex gap="12px" px="16px" align="center" justify="space-between" h="48px">
       <SideBarToggle onClick={open}/>
       <SearchInp />
     </Flex>

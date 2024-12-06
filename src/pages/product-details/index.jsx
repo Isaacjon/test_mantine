@@ -13,7 +13,7 @@ import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import { products, products2 } from "../home/Home";
 import { useNavigate, useParams } from "react-router-dom";
 import styles from "./styles.module.css";
-import { IoBookmarkOutline } from "react-icons/io5";
+import { IoBookmark, IoBookmarkOutline } from "react-icons/io5";
 import {
   OnSale,
   ProductButtons,
@@ -25,17 +25,24 @@ import { RiBox1Line } from "react-icons/ri";
 import { LiaTruckSolid } from "react-icons/lia";
 import { RenderProductsSection } from "../../components/render-products-section";
 import { useEffect } from "react";
+import useStore from "../../store";
 
 const allproducts = products.concat(products2);
 
 export const ProductDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const store = useStore((state) => state);
 
   const handleBack = () => navigate(-1);
 
+  const bookmark = (product) => () => store.bookmarkProduct(product) 
+
   const product = allproducts.find((item) => item.id == id) || {};
   product.imageList[0] = product.image
+
+  const isBookmarked = store.bookmarks.some(item => item.id === product.id)
+  const BookmarkIcon = isBookmarked ? IoBookmark : IoBookmarkOutline 
 
   useEffect(() => {
     window.scrollTo({
@@ -75,7 +82,8 @@ export const ProductDetails = () => {
         {/* name */}
         <Flex mt="20px">
           <Title order={5}>{product.name}</Title>
-          <IoBookmarkOutline size="25px" />
+          <BookmarkIcon style={{cursor: 'pointer'}} color={isBookmarked ? 'gold' : ''} size="25px" onClick={bookmark(product)}/>
+          
         </Flex>
         {/* name */}
 

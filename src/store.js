@@ -3,8 +3,18 @@ import { create } from 'zustand'
 
 const useStore = create((set) => ({
   cart: [],
+  bookmarks: [],
   drawer: null,
   cartLength: 0,
+  bookmarkProduct: (product) => set((state) => ({
+    bookmarks: (() => {
+      const oldProduct = state.bookmarks.find(oldProduct => oldProduct.id === product.id)
+
+      if(!oldProduct) return [{...product, count: 1}, ...state.bookmarks]
+      
+      return state.bookmarks.filter(item => item.id !== product.id)
+    })()
+  })),
   addToCart: (product) => set((state) => ({
     // cart: [product, ...state.cart]
     cart: (()=> {

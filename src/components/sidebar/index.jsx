@@ -1,7 +1,9 @@
-import { Box, Button, Drawer, Stack } from "@mantine/core";
+import { Box, Button, Divider, Drawer, Flex, Stack } from "@mantine/core";
 import { FaArrowLeft } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import styles from './styles.module.css'
+import { LogoFrameIcon } from "../../assets/icons";
+import { MdEmail, MdOutlineAlternateEmail, MdOutlineMarkEmailRead, MdOutlineMarkEmailUnread } from "react-icons/md";
 
 export const SideBarToggle = ({ ...props }) => {
   return (
@@ -41,11 +43,31 @@ export const Sidebar = ({ opened, open, close }) => {
               </Box>
             </Stack>
           ))}
+
+          {sections.map((sec, i) => {
+            return (
+              <>
+                <Divider />
+                <Flex className={styles.hover_links} my="10px" key={i} align="center" gap="10px">
+                  <sec.icon />
+                  <text>{sec.title}</text>
+                </Flex>
+              </>
+            )
+          })}
+
         </Drawer.Body>
       </Drawer.Content>
     </Drawer.Root>
   );
 };
+
+const sections = [
+  {icon: LogoFrameIcon,
+  title: 'Магазины', link: '/shop'}  ,
+  {icon: MdOutlineMarkEmailRead,
+  title: 'Клиентская поддержка', link: ''}  
+]
 
 const navBarData = [
   {
